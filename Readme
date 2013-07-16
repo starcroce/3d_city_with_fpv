@@ -1,0 +1,18 @@
+Read Me of the Raining City_Yisha Wu
+
+After compiling the source code,
+Use "./final f16.obj" to execute the program and load the obj file.
+Use UP, DOWN, LEFT and RIGHT to move forward, backward, left and right.
+Use "w", "s", "a" and "d" to control the view to look up, down, left and right.
+Use SPACE and "c" to rise and fall.
+Use ESC to exit from the program.
+
+I implemented the first person view feature to let the user can walk in the world and enjoy the scene of the raining city. And I added the collision detection to make sure the user can only walk on the road. It can avoid the user walking into the buildings or out of the world. The bottom left corner of the window shows the 3-D position of the user in the world.
+
+I implemented the particle engine to create the raining particles. I initialized the parameters of the raining particles include the number, life, fade rate, color, speed and acceleration in the "rain_init()" function. And I made the birth position of the raining particles as the random position in the world after the life of the rain particles is 0. 
+The rain particles are white lines with acceleration of gravity and initialized random speed at X, Y and Z axises. The random birth position, large number and the life & fade rate of particles can ensure the them fulfill the world which looks like the real rain.
+
+I created two moving lights at the top of the central building with cycle movement. And I used the shadow map algorithm to create the shadow. The user can see the moving lights in the sky, the changing light and shadow effect on each buildings and the moving shadows on the ground.
+
+I also loaded the f16.obj file into the program. The users can see two f-16 fighters flying in the sky. Their moving path is the circle on the X-Z plane and the sine wave on the Y axis. I calculated the complex trigonometric function to design the rotation of the objects. It is to make sure they always pointing to the right direction during the flying.
+
